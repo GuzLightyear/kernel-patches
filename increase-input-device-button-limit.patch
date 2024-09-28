@@ -1,0 +1,41 @@
+From 11164d0d388dcaa4ab90bf5ad9baacbec10c0b4b Mon Sep 17 00:00:00 2001
+From: GuzLightyear <guzlightyear@gmail.com>
+Date: Tue, 26 Mar 2024 22:31:57 +0100
+Subject: [PATCH]  Not currently on any branch.  Changes to be committed: 
+ modified:   include/linux/mod_devicetable.h 	modified:  
+ include/uapi/linux/input-event-codes.h
+
+---
+ include/linux/mod_devicetable.h        | 2 +-
+ include/uapi/linux/input-event-codes.h | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/include/linux/mod_devicetable.h b/include/linux/mod_devicetable.h
+index f458469c5ce5..7579ca9fba18 100644
+--- a/include/linux/mod_devicetable.h
++++ b/include/linux/mod_devicetable.h
+@@ -333,7 +333,7 @@ struct pcmcia_device_id {
+ /* Input */
+ #define INPUT_DEVICE_ID_EV_MAX		0x1f
+ #define INPUT_DEVICE_ID_KEY_MIN_INTERESTING	0x71
+-#define INPUT_DEVICE_ID_KEY_MAX		0x2ff
++#define INPUT_DEVICE_ID_KEY_MAX		0x4ff
+ #define INPUT_DEVICE_ID_REL_MAX		0x0f
+ #define INPUT_DEVICE_ID_ABS_MAX		0x3f
+ #define INPUT_DEVICE_ID_MSC_MAX		0x07
+diff --git a/include/uapi/linux/input-event-codes.h b/include/uapi/linux/input-event-codes.h
+index 022a520e31fc..97cd989f9ffe 100644
+--- a/include/uapi/linux/input-event-codes.h
++++ b/include/uapi/linux/input-event-codes.h
+@@ -805,7 +805,7 @@
+ 
+ /* We avoid low common keys in module aliases so they don't get huge. */
+ #define KEY_MIN_INTERESTING	KEY_MUTE
+-#define KEY_MAX			0x2ff
++#define KEY_MAX			0x4ff
+ #define KEY_CNT			(KEY_MAX+1)
+ 
+ /*
+-- 
+2.44.0
+
